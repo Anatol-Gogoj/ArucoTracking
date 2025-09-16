@@ -289,8 +289,8 @@ def Main():
                         # Log pose
                         R, _ = cv2.Rodrigues(rvec)
                         A, B, C = RotationMatrixToABC(R)
-                        tvec_log = (float(tvec[0]), float(tvec[1]), float(tvec[2]))
-                        rvec_log = (float(rvec[0]), float(rvec[1]), float(rvec[2]))
+                        tvec_log = (float(tvec[0, 0]), float(tvec[1, 0]), float(tvec[2, 0]))
+                        rvec_log = (float(rvec[0, 0]), float(rvec[1, 0]), float(rvec[2, 0]))
 
                     # Draw center point with outline
                     if cx is not None and cy is not None:
